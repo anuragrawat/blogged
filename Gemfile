@@ -11,7 +11,6 @@ gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'cancan'
 gem 'devise'
 gem 'mysql2'
-gem 'rolify'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 group :development do
