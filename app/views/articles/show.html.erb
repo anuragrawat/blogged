@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+  <div class="panel-heading ">
+    <%= @article.title %>
+    <span style="float: right"><%= ('By ' + @article.user.name) if (@article.user && @article.user.present?) %> </span>
+  </div>
+  <div class="panel-body">
+    <%= @article.body.to_s %>
+  </div>
+</div>
