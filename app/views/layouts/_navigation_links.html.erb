@@ -1,0 +1,16 @@
+<% if can? :create, Article %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe + " My Articles", list_articles_path %></li>
+    </ul>
+<% end %>
+<% if can? :publish, Article %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to '<i class="fa  fa-check-square-o"></i>'.html_safe + " Publish", list_articles_path %></li>
+    </ul>
+<% end %>
+
+<% if can? :manage, User %>
+    <ul class="nav navbar-nav">
+      <li><%= link_to '<i class="fa fa-users"></i>'.html_safe + " Users", users_path %></li>
+    </ul>
+<% end %>

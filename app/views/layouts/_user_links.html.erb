@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
     <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" id="user_icon" href="#"><i class="fa fa-user"></i>&nbsp;<%= current_user.username.humanize %>
+      <a class="dropdown-toggle" data-toggle="dropdown" id="user_icon" href="#"><i class="fa fa-user"></i>&nbsp;<%= current_user.name.humanize %>
       </a>
       <ul class="dropdown-menu" aria-labelledby="user_icon">
         <li> <%= link_to '<i class="fa fa-wrench"></i>'.html_safe + " Edit Account", :controller => :users, :action => :edit_profile %></li>
@@ -8,8 +8,6 @@
       </ul>
     </li>
 <% else %>
-    <ul class="nav navbar-nav">
-      <li><%= link_to '<i class="fa fa-sign-in"></i>'.html_safe + " Sign In", new_user_session_path %></li>
-      <li><%= link_to '<i class="fa fa-sign-in"></i>'.html_safe + " Sign Up", new_user_registration_path %></li>
-    </ul>
+    <li><%= link_to '<i class="fa fa-sign-in"></i>'.html_safe + " Sign In", new_user_session_path %></li>
+    <li><%= link_to '<i class="fa fa-pencil"></i>'.html_safe + " Sign Up", new_user_registration_path %></li>
 <% end %>
