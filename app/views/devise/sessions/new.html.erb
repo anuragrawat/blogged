@@ -3,7 +3,7 @@
       <h3 style="text-align:center">Log In</h3>
       <%= devise_error_messages! %>
       <br/>
-      <%= f.text_field :name, :autofocus => true, :placeholder => "Username", :class => "form-control" %>
+      <%= f.text_field :email, :autofocus => true, :placeholder => "Email", :class => "form-control" %>
       <br/>
       <%= f.password_field :password, :placeholder => "Password", :class => "form-control" %>
       <br/>
@@ -13,7 +13,7 @@
           </div>
           <br/>
       <% end -%>
-      <%= f.submit "Sign In", :class => 'btn btn-primary' %>
+      <%= f.submit "Sign In", :class => 'btn btn-primary' ,:style => 'width: 100%;' %>
   <% end %>
   <br/>
   <div style="text-align:right"><%= link_to "Forgot password?", new_password_path(resource_name) %>  </div>

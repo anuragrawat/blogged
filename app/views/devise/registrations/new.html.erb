@@ -5,11 +5,13 @@
       <br/>
       <%= f.text_field :name, :autofocus => true, :placeholder => "Username", :class => "form-control" %>
       <br/>
+      <%= f.text_field :email, :placeholder => "Email", :class => "form-control" %>
+      <br/>
       <%= f.password_field :password, :placeholder => "Password", :class => "form-control" %>
       <br/>
       <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation", :class => "form-control" %>
       <br/>
-      <%= f.submit 'Sign Up', :class => 'btn btn-primary' %>
+      <%= f.submit 'Sign Up', :class => 'btn btn-primary' ,:style => 'width: 100%;' %>
   <% end %>
 </div>
 
