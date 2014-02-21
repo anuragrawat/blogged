@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :as => [:editor, :reporter, :admin]
+
   attr_accessible :role, :as => :admin
   validates_uniqueness_of :name
 
@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :articles
 
   @@roles = [:admin, :editor, :reporter, :guest]
-
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me #, :as => [:default, :editor, :reporter, :admin]
   def self.get_all_roles
     @@roles
   end
