@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :articles
 
   @@roles = [:admin, :editor, :reporter, :guest]
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me #, :as => [:default, :editor, :reporter, :admin]
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me , :as => [:default, :editor, :reporter, :admin]
   def self.get_all_roles
     @@roles
   end

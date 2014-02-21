@@ -5,8 +5,9 @@ class Ability
     user = user || User.new # for guest
     if user.role == "reporter"
       can :create, Article
-      can [:list, :read, :edit], Article, :user_id => user.id
+      can :manage, Article, :user_id => user.id
       cannot :edit, Article, :is_published => true
+      cannot :publish ,Article
       can :edit_profile, User
       can :update, User, :id => user.id
     elsif user.role == "editor"
